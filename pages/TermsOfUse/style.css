@@ -24,12 +24,18 @@ header {
   height: 46.48px;
 }
 
+.navbar .menu-icon {
+  display: none;
+}
+
 .navbar .navlinks {
   display: flex;
   list-style: none;
   gap: 30px;
   text-transform: uppercase;
   font-family: "Arial", Sans-serif;
+  font-size: 15px;
+  padding: 0 15px;
 }
 
 .content {
@@ -41,10 +47,17 @@ header {
 .content .page-title {
   margin-bottom: 15px;
   font-family: "Lato", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
 }
 
 .content .action-container {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .action-container h2 {
@@ -53,7 +66,15 @@ header {
 }
 
 .action-container .apply-btn {
-  padding: 10px;
+  margin: 10px;
+  padding: 18px 22px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #4abc4f;
+  border: none;
 }
 
 .content .terms-container {
@@ -74,4 +95,93 @@ header {
   color: rgb(124, 111, 115);
   font-size: 15px;
   font-weight: 800;
+  overflow-wrap: break-word;
+}
+
+.content .terms-container ul {
+  list-style-position: inside;
+  margin-left: 48px;
+  margin-bottom: 24px;
+  font-family: "Roboto", Sans-serif;
+  line-height: 26.25px;
+  color: rgb(124, 111, 115);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.content .terms-container p a {
+  color: #4abc4f;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  font-family: "Lato", Sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1200px) {
+  .content {
+    padding: 105px 65px;
+  }
+}
+
+@media only screen and (max-width: 925px) {
+  header {
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .navbar .navlinks {
+    /* display: none; */
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    height: 100vh;
+    width: 80vw;
+    top: 0;
+    right: 0;
+    font-family: "Abril Fatface", display;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 60px;
+    color: rgb(124, 111, 115);
+    gap: 0;
+  }
+
+  .navbar .navlinks .navlink {
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .navbar .menu-icon {
+    display: initial;
+    width: 46px;
+    height: 46px;
+    background-color: transparent;
+    border: 1px solid #4abc4f;
+  }
+
+  .navbar .menu-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .content {
+    padding: 72px 68px;
+  }
+
+  footer {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .content {
+    padding: 48px 24px;
+  }
 }
